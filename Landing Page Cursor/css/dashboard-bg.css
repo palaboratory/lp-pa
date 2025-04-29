@@ -1,0 +1,42 @@
+.satisfaction-chart {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.satisfaction-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: conic-gradient(var(--primary) 97%, rgba(255, 255, 255, 0.1) 97%);
+    animation: rotateChart 2s ease-out forwards;
+}
+
+.satisfaction-inner {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: var(--card-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+@keyframes rotateChart {
+    from {
+        transform: rotate(-90deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+// ... existing code ...

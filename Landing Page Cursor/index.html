@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PA Lab - Transformação Digital & Inovação</title>
+    <link rel="icon" type="image/png" href="assets/logos/icone.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="assets/logos/Logo.png" alt="PA Lab" width="40" height="40">
+            </a>
+            <nav class="nav-links">
+                <a href="#inicio" class="nav-link">Início</a>
+                <a href="#servicos" class="nav-link">Soluções</a>
+                <a href="#clientes" class="nav-link">Cases</a>
+                <a href="#contato" class="button-primary">Fale Conosco <i class="fas fa-comments"></i></a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-container">
+                <div class="hero-content fade-in-up">
+                    <h1 class="hero-title"><span class="text-light">Transformamos sua</span> <span class="text-bold">visão em realidade</span></h1>
+                    <p class="hero-description">Através de soluções tecnológicas inovadoras e personalizadas, impulsionamos a transformação digital do seu negócio para alcançar resultados extraordinários.</p>
+                    <div class="hero-cta">
+                        <a href="#contato" class="button-primary">Fale Conosco <i class="fas fa-comments"></i></a>
+                    </div>
+                </div>
+                <div class="dashboard-preview fade-in-up">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Crescimento de Receita</h3>
+                            <div class="card-controls">
+                                <span class="period-text">Últimos 12 meses</span>
+                            </div>
+                        </div>
+                        <div class="chart-container revenue-chart">
+                            <div class="chart-bar" style="--value: 65%"></div>
+                            <div class="chart-bar" style="--value: 78%"></div>
+                            <div class="chart-bar" style="--value: 85%"></div>
+                            <div class="chart-bar" style="--value: 72%"></div>
+                            <div class="chart-bar" style="--value: 90%"></div>
+                            <div class="chart-bar" style="--value: 95%"></div>
+                        </div>
+                        <div class="chart-labels">
+                            <span>Jul</span>
+                            <span>Ago</span>
+                            <span>Set</span>
+                            <span>Out</span>
+                            <span>Nov</span>
+                            <span>Dez</span>
+                        </div>
+                        <div class="revenue-details">
+                            <div class="revenue-summary">
+                                <div class="summary-item">
+                                    <span class="summary-label">Receita Total</span>
+                                    <span class="summary-value">R$ 12.5M</span>
+                                    <span class="summary-trend up">+18.5%</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">Meta Anual</span>
+                                    <span class="summary-value">85%</span>
+                                    <span class="summary-trend">Atingida</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>KPIs Principais</h3>
+                            <div class="card-controls">
+                                <span class="trend-up">+12.5%</span>
+                            </div>
+                        </div>
+                        <div class="kpi-grid">
+                            <div class="kpi-item">
+                                <div class="kpi-value">87%</div>
+                                <div class="kpi-label">Satisfação</div>
+                                <div class="kpi-trend up">↑ 5%</div>
+                            </div>
+                            <div class="kpi-item">
+                                <div class="kpi-value">2.3M</div>
+                                <div class="kpi-label">Receita</div>
+                                <div class="kpi-trend up">↑ 12%</div>
+                            </div>
+                            <div class="kpi-item">
+                                <div class="kpi-value">94%</div>
+                                <div class="kpi-label">Retenção</div>
+                                <div class="kpi-trend up">↑ 3%</div>
+                            </div>
+                        </div>
+                        <div class="kpi-details">
+                            <div class="kpi-detail-item">
+                                <span class="kpi-detail-label">Novos Clientes</span>
+                                <span class="kpi-detail-value">+127</span>
+                            </div>
+                            <div class="kpi-detail-item">
+                                <span class="kpi-detail-label">Ticket Médio</span>
+                                <span class="kpi-detail-value">R$ 1.850</span>
+                            </div>
+                            <div class="kpi-detail-item">
+                                <span class="kpi-detail-label">Taxa de Conversão</span>
+                                <span class="kpi-detail-value">32%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Análise de Mercado</h3>
+                            <div class="card-controls">
+                                <span class="period-text">Tempo Real</span>
+                            </div>
+                        </div>
+                        <div class="market-chart">
+                            <div class="donut-chart">
+                                <svg viewBox="0 0 36 36" class="circular-chart">
+                                    <path class="circle-bg"
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="circle"
+                                        stroke-dasharray="75, 100"
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                </svg>
+                                <div class="donut-center">
+                                    75%
+                                    <div class="donut-label">Market Share</div>
+                                </div>
+                            </div>
+                            <div class="market-segments">
+                                <div class="segment-item">
+                                    <span class="segment-color" style="background: var(--primary)"></span>
+                                    <span class="segment-label">Segmento Enterprise</span>
+                                    <span class="segment-value">45%</span>
+                                </div>
+                                <div class="segment-item">
+                                    <span class="segment-color" style="background: var(--secondary)"></span>
+                                    <span class="segment-label">Segmento Corporate</span>
+                                    <span class="segment-value">30%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="services">
+            <div class="section-title">
+                <h2>Nossas Soluções</h2>
+                <p>Transformando dados em vantagem competitiva para seu negócio</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="service-bg-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="service-title">Ciência de Dados</h3>
+                    <p class="service-description">
+                        Análises preditivas e prescritivas que transformam dados em decisões estratégicas, otimizando processos e antecipando tendências.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="service-bg-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="service-title">Engenharia de Dados</h3>
+                    <p class="service-description">
+                        Infraestrutura robusta e escalável para coleta, processamento e armazenamento de dados em ambientes cloud.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="service-bg-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="service-title">Inteligência de Negócios</h3>
+                    <p class="service-description">
+                        Dashboards e relatórios que transformam dados complexos em insights claros para decisões ágeis e assertivas.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="service-bg-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="service-title">Automação de Processos</h3>
+                    <p class="service-description">
+                        Eliminação de tarefas repetitivas através de automação inteligente, aumentando a eficiência operacional.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="jornada" class="journey">
+            <div class="section-subtitle">
+                <h3>Jornada de Resultados</h3>
+                <p>Do dado à decisão: cada etapa cuidadosamente projetada para maximizar o valor do seu negócio</p>
+            </div>
+            <div class="flow-container">
+                <div class="flow-stage" data-stage="coleta">
+                    <div class="stage-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="service-bg-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h4>Coleta</h4>
+                    <div class="tech-pills">
+                        <span class="tech-pill">CRM</span>
+                        <span class="tech-pill">ERP</span>
+                        <span class="tech-pill">APIs</span>
+                        <span class="tech-pill">Web Scraping</span>
+                    </div>
+                </div>
+
+                <div class="flow-stage" data-stage="processamento">
+                    <div class="stage-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="service-bg-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h4>Processamento</h4>
+                    <div class="tech-pills">
+                        <span class="tech-pill">ETL</span>
+                        <span class="tech-pill">ELT</span>
+                        <span class="tech-pill">Cloud</span>
+                        <span class="tech-pill">Pipelines</span>
+                    </div>
+                </div>
+
+                <div class="flow-stage" data-stage="analise">
+                    <div class="stage-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="service-bg-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Análise</h4>
+                    <div class="tech-pills">
+                        <span class="tech-pill">BI</span>
+                        <span class="tech-pill">KPIs</span>
+                        <span class="tech-pill">Estatística</span>
+                        <span class="tech-pill">Machine Learning</span>
+                    </div>
+                </div>
+
+                <div class="flow-stage" data-stage="automacao">
+                    <div class="stage-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="service-bg-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h4>Automação</h4>
+                    <div class="tech-pills">
+                        <span class="tech-pill">Scripts</span>
+                        <span class="tech-pill">Alertas Inteligentes</span>
+                        <span class="tech-pill">Workflows</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="clientes" class="clients">
+            <div class="section-title">
+                <h2>Nossos Cases</h2>
+                <p>Visões Transformadas em realidade: mais de 150 Cases em diversos países de empresas que confiam em nossa expertise para impulsionar seus resultados</p>
+            </div>
+            
+            <div class="cases-slider">
+                <div class="cases-track">
+                    <a href="https://www.figma.com/proto/S7t46DMbiktTcbKzzsuf3D/Cases-PA-Lab?node-id=1249-643&embed-host=share" target="_blank" class="case-slide">
+                        <img src="assets/cases/Ser+.png" alt="Case Ser+">
+                    </a>
+                    <a href="https://www.figma.com/proto/S7t46DMbiktTcbKzzsuf3D/Cases-PA-Lab?node-id=1249-643&embed-host=share" target="_blank" class="case-slide">
+                        <img src="assets/cases/SuperProfessor.png" alt="Case Super Professor">
+                    </a>
+                    <a href="https://www.figma.com/proto/S7t46DMbiktTcbKzzsuf3D/Cases-PA-Lab?node-id=1249-643&embed-host=share" target="_blank" class="case-slide">
+                        <img src="assets/cases/DNV.png" alt="Case DNV">
+                    </a>
+                </div>
+                <div class="cases-nav">
+                    <button class="nav-dot active" data-slide="0"></button>
+                    <button class="nav-dot" data-slide="1"></button>
+                    <button class="nav-dot" data-slide="2"></button>
+                </div>
+            </div>
+            
+            <div class="clients-carousel">
+                <div class="carousel-track">
+                    <div class="client-card">
+                        <img src="assets/images/cliente2.png" alt="Cliente 2">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente3.png" alt="Cliente 3">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente4.png" alt="Cliente 4">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente5.png" alt="Cliente 5">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente6.png" alt="Cliente 6">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente7.png" alt="Cliente 7">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente9.png" alt="Cliente 9">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente10.png" alt="Cliente 10">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente11.png" alt="Cliente 11">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente12.png" alt="Cliente 12">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente2.png" alt="Cliente 2">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente3.png" alt="Cliente 3">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente4.png" alt="Cliente 4">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente5.png" alt="Cliente 5">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente6.png" alt="Cliente 6">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente7.png" alt="Cliente 7">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente9.png" alt="Cliente 9">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente10.png" alt="Cliente 10">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente11.png" alt="Cliente 11">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente12.png" alt="Cliente 12">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="section-title" style="text-align: left;">
+                        <div class="pre-title">COMEÇE AGORA!</div>
+                        <h2><span class="text-light">Quer saber como a PA Lab pode</span> <span class="text-bold">transformar seu negócio?</span></h2>
+                        <p>Descubra como nossa expertise em dados pode ser o catalisador da sua próxima grande conquista. Cada projeto é uma nova história de sucesso esperando para começar.</p>
+                    </div>
+                    <div class="contact-details">
+   
+                    </div>
+                </div>
+                <form id="contactForm" method="post" class="contact-form" style="font-family: 'Space Grotesk', sans-serif;">
+                    <div class="form-group">
+                        <label for="name" style="font-weight: 500; font-size: 0.95rem;">Nome completo</label>
+                        <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required minlength="3" autocomplete="name">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" style="font-weight: 500; font-size: 0.95rem;">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="exemplo@email.com" required oninput="validateEmail(this)" autocomplete="email">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" style="font-weight: 500; font-size: 0.95rem;">Telefone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000" required oninput="maskPhone(this)" autocomplete="tel">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" style="font-weight: 500; font-size: 0.95rem;">Como podemos ajudar?</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Descreva sua necessidade..." required minlength="10" autocomplete="off"></textarea>
+                        <span class="error-message"></span>
+                    </div>
+                    <button type="submit">TRANSFORME SEU NEGÓCIO <i class="fas fa-rocket"></i></button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2025 Todos os direitos reservados</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/palaboratory/" class="social-link" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/pa-lab/" class="social-link" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Animation - Otimizado A
+        const scrollElements = document.querySelectorAll("[data-scroll]");
+        let ticking = false;
+
+        const elementInView = (el, offset = 0) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return (
+                elementTop <= 
+                (window.innerHeight || document.documentElement.clientHeight) - offset
+            );
+        };
+
+        const handleScrollAnimation = () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    scrollElements.forEach((el) => {
+                        if (elementInView(el, 100)) {
+                            el.classList.add("is-visible");
+                        }
+                    });
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        };
+
+        window.addEventListener("scroll", handleScrollAnimation, { passive: true });
+
+        // Header Scroll Effect - Otimizado
+        const header = document.querySelector('.header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            lastScroll = currentScroll;
+        }, { passive: true });
+
+        // Animação das barras do gráfico de receita - Otimizado
+        const chartBars = document.querySelectorAll('.chart-bar');
+        let chartInterval;
+        
+        function updateBars() {
+            chartBars.forEach(bar => {
+                const newValue = Math.floor(Math.random() * 30) + 65;
+                bar.style.setProperty('--value', `${newValue}%`);
+            });
+        }
+
+        // Iniciar animações apenas quando visível
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('dashboard-preview')) {
+                        updateBars();
+                        chartInterval = setInterval(updateBars, 4000);
+                    }
+                } else {
+                    if (entry.target.classList.contains('dashboard-preview')) {
+                        clearInterval(chartInterval);
+                    }
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Observar elementos que precisam de animação
+        document.querySelectorAll('.dashboard-preview').forEach(el => observer.observe(el));
+
+        // Animação do gráfico de rosca
+        const donutChart = document.querySelector('.circle');
+        const donutValue = document.querySelector('.donut-center');
+        let currentValue = 75;
+
+        function updateDonut() {
+            currentValue = Math.floor(Math.random() * 20) + 70; // Valores entre 70 e 90
+            donutChart.setAttribute('stroke-dasharray', `${currentValue}, 100`);
+            donutValue.textContent = `${currentValue}%`;
+        }
+
+        // Atualização inicial
+        updateDonut();
+        
+        // Atualização periódica
+        setInterval(updateDonut, 3000);
+
+        // Atualização dos KPIs
+        const kpiValues = document.querySelectorAll('.kpi-value');
+        const kpiTrends = document.querySelectorAll('.kpi-trend');
+
+        function updateKPIs() {
+            kpiValues.forEach((kpi, index) => {
+                let newValue;
+                let trend;
+                
+                switch(index) {
+                    case 0: // Satisfação
+                        newValue = Math.floor(Math.random() * 10) + 85;
+                        trend = Math.floor(Math.random() * 5) + 3;
+                        kpi.textContent = `${newValue}%`;
+                        break;
+                    case 1: // Receita
+                        newValue = (Math.random() * 0.5 + 2).toFixed(1);
+                        trend = Math.floor(Math.random() * 8) + 8;
+                        kpi.textContent = `${newValue}M`;
+                        break;
+                    case 2: // Retenção
+                        newValue = Math.floor(Math.random() * 6) + 92;
+                        trend = Math.floor(Math.random() * 3) + 2;
+                        kpi.textContent = `${newValue}%`;
+                        break;
+                }
+                
+                kpiTrends[index].textContent = `↑ ${trend}%`;
+            });
+        }
+
+        // Atualização inicial
+        updateKPIs();
+        
+        // Atualização periódica
+        setInterval(updateKPIs, 5000);
+
+        // Status circles animation
+        const statusCircles = document.querySelectorAll('.status-circle');
+        statusCircles.forEach((circle, index) => {
+            setTimeout(() => {
+                circle.style.animationDelay = `${index * 0.5}s`;
+            }, 100);
+        });
+
+        function maskPhone(input) {
+            let value = input.value.replace(/\D/g, '');
+            if (value.length > 11) value = value.slice(0, 11);
+            
+            if (value.length >= 11) {
+                value = `(${value.slice(0,2)}) ${value.slice(2,7)}-${value.slice(7)}`;
+            } else if (value.length >= 7) {
+                value = `(${value.slice(0,2)}) ${value.slice(2,7)}-${value.slice(7)}`;
+            } else if (value.length >= 2) {
+                value = `(${value.slice(0,2)}) ${value.slice(2)}`;
+            }
+            
+            input.value = value;
+            validatePhone(input);
+        }
+
+        function validatePhone(input) {
+            const errorElement = input.nextElementSibling;
+            const phonePattern = /^\([0-9]{2}\) [0-9]{5}-[0-9]{4}$/;
+            
+            if (!phonePattern.test(input.value)) {
+                errorElement.textContent = "Digite um telefone válido: (00) 00000-0000";
+                input.setCustomValidity("Digite um telefone válido");
+            } else {
+                errorElement.textContent = "";
+                input.setCustomValidity("");
+            }
+        }
+
+        function validateEmail(input) {
+            const errorElement = input.nextElementSibling;
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            
+            if (!emailPattern.test(input.value)) {
+                errorElement.textContent = "Digite um e-mail válido";
+                input.setCustomValidity("Digite um e-mail válido");
+            } else {
+                errorElement.textContent = "";
+                input.setCustomValidity("");
+            }
+        }
+    </script>
+    <script src="js/clients-slider.js"></script>
+    <script src="js/form-validation.js"></script>
+    <script src="js/dashboard-effects.js"></script>
+    <script>
+        // Cases Slider
+        const casesTrack = document.querySelector('.cases-track');
+        const navDots = document.querySelectorAll('.nav-dot');
+        let currentSlide = 0;
+
+        function goToSlide(index) {
+            casesTrack.style.transform = `translateX(-${index * 100}%)`;
+            navDots.forEach(dot => dot.classList.remove('active'));
+            navDots[index].classList.add('active');
+            currentSlide = index;
+        }
+
+        navDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => goToSlide(index));
+        });
+
+        // Auto-slide a cada 5 segundos
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % 3;
+            goToSlide(currentSlide);
+        }, 5000);
+    </script>
+</body>
+</html> 
