@@ -704,6 +704,62 @@ textarea.form-input {
         padding: 1rem 0;
         border-radius: 8px;
     }
+
+    /* Títulos dos campos */
+    .form-group label {
+        font-size: 12px !important;
+        font-weight: 300 !important; /* fonte light */
+        color: var(--text-secondary, #bfc9e0); /* ou ajuste conforme sua paleta */
+    }
+
+    /* Placeholders dos campos */
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        font-size: 12px !important;
+        font-weight: 300 !important; /* fonte light */
+        color: var(--text-tertiary, #bfc9e0); /* ou ajuste conforme sua paleta */
+        opacity: 1;
+    }
+
+    /* Inputs normais */
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"] {
+        height: 30px !important;
+        min-height: 30px !important;
+        max-height: 30px !important;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    /* Último campo (textarea) */
+    .form-group textarea {
+        height: 60px !important;
+        min-height: 60px !important;
+        max-height: 120px; /* permite expandir se o usuário digitar mais */
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        resize: vertical;
+    }
+
+    /* Valor dos KPIs */
+    .kpi-value,
+    .summary-value,
+    .kpi-detail-value {
+        font-size: 12px !important;
+        font-weight: 700;
+    }
+
+    /* Título/label dos KPIs */
+    .kpi-label,
+    .summary-label,
+    .kpi-trend,
+    .summary-trend,
+    .kpi-detail-label {
+        font-size: 9px !important;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+    }
 }
 
 /* Footer */
@@ -934,6 +990,117 @@ textarea.form-input {
     .section-title h2 {
         font-size: 16px !important;
         text-align: left;
+    }
+
+    .dashboard-preview {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: 100vw;
+        max-height: 300px;
+        padding: 1rem 0;
+        margin-left: -16px;
+        margin-right: -16px;
+        box-sizing: content-box;
+        scroll-snap-type: x mandatory;
+    }
+
+    .dashboard-card {
+        width: 250px !important;
+        min-width: 250px !important;
+        max-width: 250px !important;
+        height: 300px !important;
+        min-height: 300px !important;
+        max-height: 300px !important;
+        flex: 0 0 250px !important;
+        scroll-snap-align: start;
+        margin-bottom: 0;
+        padding: 1rem 0.75rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .dashboard-card .card-header h3 {
+        font-size: 13px !important;
+        font-weight: 600;
+    }
+
+    .dashboard-card .period-text,
+    .dashboard-card .trend-up {
+        font-size: 0.75rem;
+    }
+
+    .chart-labels span {
+        font-size: 0.7rem;
+    }
+
+    .summary-label,
+    .summary-trend,
+    .kpi-label,
+    .kpi-trend,
+    .kpi-detail-label {
+        font-size: 0.75rem;
+    }
+
+    .summary-value,
+    .kpi-value,
+    .kpi-detail-value {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .chart-container {
+        height: 80px;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .chart-bar {
+        width: 12px;
+        min-height: 4px;
+        border-radius: 3px;
+    }
+
+    .kpi-grid {
+        gap: 0.5rem;
+    }
+
+    .kpi-item {
+        padding: 0.5rem;
+        border-radius: 8px;
+    }
+
+    .donut-chart {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 0.5rem;
+    }
+
+    .donut-center {
+        font-size: 1rem;
+    }
+
+    .donut-label {
+        font-size: 0.75rem;
+    }
+
+    .market-segments {
+        gap: 0.5rem;
+        padding: 0;
+    }
+
+    .segment-label,
+    .segment-value {
+        font-size: 0.75rem;
+    }
+
+    .dashboard-card,
+    .dashboard-card * {
+        font-size: 12px !important;
     }
 }
 
