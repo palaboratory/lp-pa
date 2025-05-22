@@ -1,0 +1,377 @@
+/* Media Queries - Responsividade */
+
+@media (max-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services {
+        padding: 2rem 1rem 3rem;
+    }
+    
+    .workflow-section {
+        margin-top: 1.5rem;
+    }
+
+    .dashboard-preview {
+        width: 100%;
+        transform: none;
+        overflow-x: auto;
+        padding: 1rem;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .dashboard-card {
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 3rem 1rem;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-form {
+        padding: 1rem;
+        border-radius: 12px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        font-size: 1rem;
+        padding: 0.75rem;
+        border-radius: 8px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        font-size: 1rem;
+        padding: 1rem 0;
+        border-radius: 8px;
+    }
+
+    /* Títulos dos campos */
+    .form-group label {
+        font-size: 12px !important;
+        font-weight: 300 !important;
+        color: var(--text-secondary, #bfc9e0);
+    }
+
+    /* Placeholders dos campos */
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        font-size: 12px !important;
+        font-weight: 300 !important;
+        color: var(--text-tertiary, #bfc9e0);
+        opacity: 1;
+    }
+
+    /* Inputs normais */
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"] {
+        height: 30px !important;
+        min-height: 30px !important;
+        max-height: 30px !important;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    /* Último campo (textarea) */
+    .form-group textarea {
+        height: 60px !important;
+        min-height: 60px !important;
+        max-height: 120px;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        resize: vertical;
+    }
+
+    /* Valor dos KPIs */
+    .kpi-value,
+    .summary-value,
+    .kpi-detail-value {
+        font-size: 12px !important;
+        font-weight: 700;
+    }
+
+    /* Título/label dos KPIs */
+    .kpi-label,
+    .summary-label,
+    .kpi-trend,
+    .summary-trend,
+    .kpi-detail-label {
+        font-size: 9px !important;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        margin: 0;
+        padding: 0.75rem 0;
+        border-bottom-left-radius: 32px;
+        border-bottom-right-radius: 32px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        background: rgba(4, 6, 32, 0.95);
+        z-index: 1000;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+    }
+
+    .nav-container {
+        max-width: 100vw;
+        padding: 0 1.5rem;
+        min-height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+    }
+
+    .logo img {
+        height: 32px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    .services {
+        padding: 2rem 1rem 2rem;
+    }
+    
+    .workflow-section {
+        margin-top: 0.75rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .clients {
+        padding: 3rem 1rem;
+    }
+
+    .client-card {
+        width: 120px;
+        height: 60px;
+        margin: 0 0.5rem;
+        padding: 0.75rem;
+    }
+
+    .project-flow {
+        padding: 1.5rem 1rem;
+    }
+
+    .footer {
+        padding: 1.5rem 1rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-bottom {
+        margin-top: 2rem;
+        padding-top: 1rem;
+    }
+
+    .contact {
+        padding: 3rem 1rem;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-form {
+        padding: 1rem;
+    }
+    
+    .form-input {
+        font-size: 16px;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .section-title p,
+    .section-subtitle p {
+        font-size: 12px !important;
+        text-align: left !important;
+    }
+
+    .section-title h2 {
+        font-size: 16px !important;
+        text-align: left;
+    }
+
+    .dashboard-preview {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: 100vw;
+        max-height: 300px;
+        padding: 1rem 0;
+        margin-left: -16px;
+        margin-right: -16px;
+        box-sizing: content-box;
+        scroll-snap-type: x mandatory;
+    }
+
+    .dashboard-card {
+        width: 250px !important;
+        min-width: 250px !important;
+        max-width: 250px !important;
+        height: 300px !important;
+        min-height: 300px !important;
+        max-height: 300px !important;
+        flex: 0 0 250px !important;
+        scroll-snap-align: start;
+        margin-bottom: 0;
+        padding: 1rem 0.75rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .dashboard-card .card-header h3 {
+        font-size: 13px !important;
+        font-weight: 600;
+    }
+
+    .dashboard-card .period-text,
+    .dashboard-card .trend-up {
+        font-size: 0.75rem;
+    }
+
+    .chart-labels span {
+        font-size: 0.7rem;
+    }
+
+    .summary-label,
+    .summary-trend,
+    .kpi-label,
+    .kpi-trend,
+    .kpi-detail-label {
+        font-size: 0.75rem;
+    }
+
+    .summary-value,
+    .kpi-value,
+    .kpi-detail-value {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .chart-container {
+        height: 80px;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .chart-bar {
+        width: 12px;
+        min-height: 4px;
+        border-radius: 3px;
+    }
+
+    .kpi-grid {
+        gap: 0.5rem;
+    }
+
+    .kpi-item {
+        padding: 0.5rem;
+        border-radius: 8px;
+    }
+
+    .donut-chart {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 0.5rem;
+    }
+
+    .donut-center {
+        font-size: 1rem;
+    }
+
+    .donut-label {
+        font-size: 0.75rem;
+    }
+
+    .market-segments {
+        gap: 0.5rem;
+        padding: 0;
+    }
+
+    .segment-label,
+    .segment-value {
+        font-size: 0.75rem;
+    }
+
+    .dashboard-card,
+    .dashboard-card * {
+        font-size: 12px !important;
+    }
+
+    .flow-container {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .flow-stage {
+        padding: 0.75rem;
+    }
+    
+    .stage-icon {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 0.5rem;
+    }
+}
+

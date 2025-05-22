@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PA Lab - Transformação Digital & Inovação</title>
-    <link rel="icon" type="image/png" href="assets/logos/icone.png">
+    <link rel="icon" type="image/png" href="assets/logos/favicon.png">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -13,14 +14,15 @@
     <header class="header">
         <div class="nav-container">
             <a href="#" class="logo">
-                <img src="assets/logos/Logo.png" alt="PA Lab" width="40" height="40">
+                <img src="assets/logos/logo.png" alt="PA Lab" width="40" height="40">
             </a>
             <nav class="nav-links">
                 <a href="#inicio" class="nav-link">INÍCIO</a>
                 <a href="#servicos" class="nav-link">SOLUÇÕES</a>
                 <a href="#clientes" class="nav-link">CASES</a>
+                <a href="#contato" class="nav-link">CONTATO</a>
             </nav>
-            <a href="#contato" class="button-secundary"><i class="fa-regular fa-message"></i>FALE CONOSCO</a>
+            <a href="#contato" class="button-secundary"><i class="fa-solid fa-comment"></i>Fale conosco</a>
         </div>
     </header>
 
@@ -31,7 +33,7 @@
                     <h1 class="hero-title"><span class="text-light">Transformamos sua</span> <span class="text-bold">visão em realidade</span></h1>
                     <p class="hero-description">Através de soluções tecnológicas inovadoras e personalizadas, impulsionamos a transformação digital do seu negócio para alcançar resultados extraordinários.</p>
                     <div class="hero-cta">
-                        <a href="#contato" class="button-primary"><i class="fa-regular fa-message"></i>FALE CONOSCO</a>
+                        <a href="#contato" class="button-primary"><i class="fa-solid fa-comment"></i>Fale conosco</a>
                     </div>
                 </div>
                 <div class="dashboard-preview fade-in-up">
@@ -156,156 +158,142 @@
                 </div>
             </div>
         </section>
+        <img src="../assets/images/grid.png" class="journey-bg" alt="grid background" />
+        <section id="jornada" class="journey">
+            <div class="flow-container">
 
-        <div class="solutions-journey-container">
+                <div class="flow-stage" data-stage="coleta">
+                    <h4>
+                        <div class="stage-icon">
+                            <i class="fa-solid fa-bomb"></i>
+                        </div>Dependência de processos manuais
+                    </h4>
+                    <p>Extração, limpeza e consolidação de dados exigem intervenções repetitivas, atrasando entregas, elevando custos operacionais e aumentando a chance de erros.</p>
+                </div>
+
+                <div class="flow-stage" data-stage="processamento">
+                    <h4>
+                        <div class="stage-icon">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>Dados isolados e inconsistentes
+                    </h4>
+                    <p>Sistemas e planilhas desconectados geram visões divergentes, dificultando a governança e a tomada de decisão baseada em dados confiáveis.</p>
+                </div>
+
+                <div class="flow-stage" data-stage="automacao">
+                    <h4> 
+                        <div class="stage-icon">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>Falta de previsibilidade estratégica
+                    </h4>
+                    <p>Ausência de modelos analíticos e preditivos impede antecipar demanda, riscos e oportunidades, comprometendo o planejamento e a alocação eficiente de recursos.</p>
+                </div>
+
+            </div>
+        </section>
+
             <section id="servicos" class="services">
                 <div class="section-title">
-                    <h2>Nossas Soluções</h2>
+                    <h2>Soluções</h2>
                     <p>Transformando dados em vantagem competitiva para seu negócio</p>
                 </div>
                 <div class="services-grid">
+
+                    <!-- Ciência de Dados -->
                     <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="service-bg-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3 class="service-title">Ciência de Dados</h3>
+                        <h3 class="service-title">
+                            Ciência de Dados
+                            <div class="service-icon">
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+                        </h3>
                         <p class="service-description">
                             Análises preditivas e prescritivas que transformam dados em decisões estratégicas, otimizando processos e antecipando tendências.
                         </p>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <div class="service-bg-icon">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h3 class="service-title">Engenharia de Dados</h3>
-                        <p class="service-description">
-                            Infraestrutura robusta e escalável para coleta, processamento e armazenamento de dados em ambientes cloud.
-                        </p>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <div class="service-bg-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h3 class="service-title">Inteligência de Negócios</h3>
-                        <p class="service-description">
-                            Dashboards e relatórios que transformam dados complexos em insights claros para decisões ágeis e assertivas.
-                        </p>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="service-bg-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h3 class="service-title">Automação de Processos</h3>
-                        <p class="service-description">
-                            Eliminação de tarefas repetitivas através de automação inteligente, aumentando a eficiência operacional.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="jornada" class="journey">
-                <div class="section-subtitle">
-                    <h2>Jornada de Resultados</h2>
-                    <p>Do dado à decisão, cada etapa cuidadosamente projetada para maximizar o valor do seu negócio</p>
-                </div>
-                <div class="flow-container">
-                    <div class="flow-stage" data-stage="coleta">
-                        <div class="stage-icon">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <div class="service-bg-icon">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h4>Coleta</h4>
                         <div class="tech-pills">
-                            <span class="tech-pill">CRM</span>
-                            <span class="tech-pill">ERP</span>
-                            <span class="tech-pill">APIs</span>
-                            <span class="tech-pill">Web Scraping</span>
-                        </div>
-                    </div>
-
-                    <div class="flow-stage" data-stage="processamento">
-                        <div class="stage-icon">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <div class="service-bg-icon">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <h4>Processamento</h4>
-                        <div class="tech-pills">
-                            <span class="tech-pill">ETL</span>
-                            <span class="tech-pill">ELT</span>
-                            <span class="tech-pill">Cloud</span>
-                            <span class="tech-pill">Pipelines</span>
-                        </div>
-                    </div>
-
-                    <div class="flow-stage" data-stage="analise">
-                        <div class="stage-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="service-bg-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h4>Análise</h4>
-                        <div class="tech-pills">
-                            <span class="tech-pill">BI</span>
-                            <span class="tech-pill">KPIs</span>
-                            <span class="tech-pill">Estatística</span>
+                            <span class="tech-pill">Predição</span>
+                            <span class="tech-pill">NLP</span>
                             <span class="tech-pill">Machine Learning</span>
+                            <span class="tech-pill">MLOPS</span>
                         </div>
                     </div>
 
-                    <div class="flow-stage" data-stage="automacao">
-                        <div class="stage-icon">
-                            <i class="fas fa-robot"></i>
+                    <!-- Engenharia de Dados -->
+                    <div class="service-card">
+                    <h3 class="service-title">
+                        Engenharia de Dados
+                        <div class="service-icon">
+                        <i class="fa-solid fa-cubes"></i>
                         </div>
-                        <div class="service-bg-icon">
-                            <i class="fas fa-robot"></i>
+                    </h3>
+                    <p class="service-description">
+                        Infraestrutura robusta e escalável para coleta, processamento e armazenamento de dados em ambientes cloud.
+                    </p>
+                    <div class="tech-pills">
+                        <span class="tech-pill">ETL</span>
+                        <span class="tech-pill">ELT</span>
+                        <span class="tech-pill">BigQuery</span>
+                        <span class="tech-pill">Airflow</span>
+                    </div>
+                    </div>
+
+                    <!-- Inteligência de Negócios -->
+                    <div class="service-card">
+                    <h3 class="service-title">
+                        Inteligência de Negócios
+                        <div class="service-icon">
+                        <i class="fas fa-brain"></i>
                         </div>
-                        <h4>Automação</h4>
-                        <div class="tech-pills">
-                            <span class="tech-pill">Scripts</span>
-                            <span class="tech-pill">Alertas Inteligentes</span>
-                            <span class="tech-pill">Workflows</span>
+                    </h3>
+                    <p class="service-description">
+                        Dashboards e relatórios que transformam dados complexos em insights claros para decisões ágeis e assertivas.
+                    </p>
+                    <div class="tech-pills">
+                        <span class="tech-pill">Power BI</span>
+                        <span class="tech-pill">KPIs</span>
+                        <span class="tech-pill">Data Viz</span>
+                        <span class="tech-pill">Storytelling</span>
+                    </div>
+                    </div>
+
+                    <!-- Automação de Processos -->
+                    <div class="service-card">
+                    <h3 class="service-title">
+                        Automação de Processos
+                        <div class="service-icon">
+                        <i class="fas fa-robot"></i>
                         </div>
+                    </h3>
+                    <p class="service-description">
+                        Eliminação de tarefas repetitivas através de automação inteligente, aumentando a eficiência operacional.
+                    </p>
+                    <div class="tech-pills">
+                        <span class="tech-pill">RPA</span>
+                        <span class="tech-pill">Workflows</span>
+                        <span class="tech-pill">APIs</span>
+                        <span class="tech-pill">Alertas Inteligentes</span>
+                    </div>
                     </div>
                 </div>
             </section>
-        </div>
+
 
         <section id="clientes" class="clients">
             <div class="section-title">
-                <h2>Nossos Cases</h2>
+                <h2>Cases</h2>
                 <p>Visões Transformadas em realidade: mais de 150 Cases em diversos países de empresas que confiam em nossa expertise para impulsionar seus resultados</p>
             </div>
             
             <div class="cases-slider">
                 <div class="cases-track">
                     <a href="https://www.figma.com/proto/S7t46DMbiktTcbKzzsuf3D/Cases-PA-Lab?node-id=1249-643&embed-host=share" target="_blank" class="case-slide">
-                        <img src="assets/cases/Ser+.png" alt="Case Ser+">
+                        <img src="assets/cases/Sermais.png" alt="Case Ser+">
                     </a>
                     <a href="https://www.figma.com/proto/S7t46DMbiktTcbKzzsuf3D/Cases-PA-Lab?node-id=1249-643&embed-host=share" target="_blank" class="case-slide">
-                        <img src="assets/cases/SuperProfessor.png" alt="Case Super Professor">
+                        <img src="assets/cases/DNV.png" alt="Case Super Professor">
                     </a>
                     <a href="https://www.figma.com/proto/S7t46DMbiktTcbKzzsuf3D/Cases-PA-Lab?node-id=1249-643&embed-host=share" target="_blank" class="case-slide">
-                        <img src="assets/cases/DNV.png" alt="Case DNV">
+                        <img src="assets/cases/SuperProf.png" alt="Case DNV">
                     </a>
                 </div>
                 <div class="cases-nav">
@@ -318,34 +306,7 @@
             <div class="clients-carousel">
                 <div class="carousel-track">
                     <div class="client-card">
-                        <img src="assets/images/cliente2.png" alt="Cliente 2">
-                    </div>
-                    <div class="client-card">
-                        <img src="assets/images/cliente3.png" alt="Cliente 3">
-                    </div>
-                    <div class="client-card">
-                        <img src="assets/images/cliente4.png" alt="Cliente 4">
-                    </div>
-                    <div class="client-card">
-                        <img src="assets/images/cliente5.png" alt="Cliente 5">
-                    </div>
-                    <div class="client-card">
-                        <img src="assets/images/cliente6.png" alt="Cliente 6">
-                    </div>
-                    <div class="client-card">
-                        <img src="assets/images/cliente7.png" alt="Cliente 7">
-                    </div>
-                    <div class="client-card">
-                        <img src="assets/images/cliente9.png" alt="Cliente 9">
-                    </div>
-                    <div class="client-card">
-                        <img src="assets/images/cliente10.png" alt="Cliente 10">
-                    </div>
-                    <div class="client-card">
-                        <img src="assets/images/cliente11.png" alt="Cliente 11">
-                    </div>
-                    <div class="client-card">
-                        <img src="assets/images/cliente12.png" alt="Cliente 12">
+                        <img src="assets/images/cliente1.png" alt="Cliente 1">
                     </div>
                     <div class="client-card">
                         <img src="assets/images/cliente2.png" alt="Cliente 2">
@@ -372,10 +333,31 @@
                         <img src="assets/images/cliente10.png" alt="Cliente 10">
                     </div>
                     <div class="client-card">
-                        <img src="assets/images/cliente11.png" alt="Cliente 11">
+                        <img src="assets/images/cliente1.png" alt="Cliente 1">
                     </div>
                     <div class="client-card">
-                        <img src="assets/images/cliente12.png" alt="Cliente 12">
+                        <img src="assets/images/cliente2.png" alt="Cliente 2">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente3.png" alt="Cliente 3">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente4.png" alt="Cliente 4">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente5.png" alt="Cliente 5">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente6.png" alt="Cliente 6">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente7.png" alt="Cliente 7">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente9.png" alt="Cliente 9">
+                    </div>
+                    <div class="client-card">
+                        <img src="assets/images/cliente10.png" alt="Cliente 10">
                     </div>
                 </div>
             </div>
@@ -386,7 +368,7 @@
                 <div class="contact-info">
                     <div class="section-title" style="text-align: left;">
                         <div class="pre-title">COMEÇE AGORA!</div>
-                        <h2><span class="text-light">Quer saber como a PA Lab pode</span> <span class="text-bold">transformar seu negócio?</span></h2>
+                        <h2><span class="text-light">Quer saber como a PA Lab pode <b>acelerar seu negócio?<b></span></h2>
                         <p>Descubra como nossa expertise em dados pode ser o catalisador da sua próxima grande conquista. Cada projeto é uma nova história de sucesso esperando para começar.</p>
                     </div>
                     <div class="contact-details">
@@ -394,24 +376,25 @@
                     </div>
                 </div>
                 <form id="contactForm" method="post" class="contact-form" style="font-family: 'Space Grotesk', sans-serif;">
+                    <h3 class="form-title">Fale conosco!</h3>
                     <div class="form-group">
-                        <label for="name" style="font-weight: 500; font-size: 0.95rem;">Nome completo</label>
-                        <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required minlength="3" autocomplete="name">
+                        <label for="name" style="font-weight: 500; font-size: 14px;">Nome</label>
+                        <input type="text" id="name" name="name" placeholder="Digite seu nome" required minlength="3" autocomplete="name">
                         <span class="error-message"></span>
                     </div>
                     <div class="form-group">
-                        <label for="email" style="font-weight: 500; font-size: 0.95rem;">E-mail</label>
+                        <label for="email" style="font-weight: 500; font-size: 14px;">E-mail</label>
                         <input type="email" id="email" name="email" placeholder="exemplo@email.com" required oninput="validateEmail(this)" autocomplete="email">
                         <span class="error-message"></span>
                     </div>
                     <div class="form-group">
-                        <label for="phone" style="font-weight: 500; font-size: 0.95rem;">Telefone</label>
+                        <label for="phone" style="font-weight: 500; font-size: 14px;">Telefone</label>
                         <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000" required oninput="maskPhone(this)" autocomplete="tel">
                         <span class="error-message"></span>
                     </div>
                     <div class="form-group">
-                        <label for="message" style="font-weight: 500; font-size: 0.95rem;">Como podemos ajudar?</label>
-                        <textarea id="message" name="message" rows="3" placeholder="Descreva sua necessidade..." required minlength="10" autocomplete="off"></textarea>
+                        <label for="message" style="font-weight: 500; font-size: 14px;">Como podemos ajudar?</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Descreva sua necessidade..." autocomplete="off"></textarea>
                         <span class="error-message"></span>
                     </div>
                     <button type="submit">TRANSFORME SEU NEGÓCIO <i class="fas fa-rocket"></i></button>
@@ -421,12 +404,16 @@
     </main>
 
 <footer class="footer" style="text-align: center;">
-  <img src="assets/logos/Logo.png" alt="PA Lab" width="70" height="30" style="display: block; margin: 0 auto 1rem;"/>
+  <img src="assets/logos/logo footer.png" alt="PA Lab" width="60" height="60" style="display: block; margin: 0 auto 1rem;"/>
   <div class="footer-bottom" style=" display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem;">
     <p style="margin: 0;">&copy; 2025 Todos os direitos reservados</p>
     <div class="social-links" style="display: flex; gap: 1.5rem;" >
       <a href="https://www.instagram.com/palaboratory/" class="social-link" target="_blank" rel="noopener" style="display: inline-block;">
         <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://api.whatsapp.com/send/?phone=5584987657727&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%21&type=phone_number&app_absent=0
+        " class="social-link" target="_blank" rel="noopener" style="display: inline-block;">
+        <i class="fab fa-whatsapp"></i>
       </a>
       <a href="https://www.linkedin.com/company/pa-lab/" class="social-link" target="_blank" rel="noopener" style="display: inline-block;">
         <i class="fab fa-linkedin"></i>

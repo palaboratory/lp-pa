@@ -27,114 +27,6 @@ function maskPhone(event) {
     input.value = formattedValue;
 }
 
-// Função para validar o formulário
-function validateForm(event) {
-    event.preventDefault();
-    
-    const form = event.target;
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const phone = form.phone.value.trim();
-    const message = form.message.value.trim();
-    
-    let isValid = true;
-    
-    // Validar nome
-    if (name.length < 3) {
-        showError(form.name, 'Nome deve ter pelo menos 3 caracteres');
-        isValid = false;
-    } else {
-        clearError(form.name);
-    }
-    
-    // Validar email
-    if (!validateEmail(email)) {
-        showError(form.email, 'Email inválido');
-        isValid = false;
-    } else {
-        clearError(form.email);
-    }
-    
-    // Validar telefone
-    const phoneDigits = phone.replace(/\D/g, '');
-    if (phoneDigits.length < 10 || phoneDigits.length > 11) {
-        showError(form.phone, 'Telefone inválido');
-        isValid = false;
-    } else {
-        clearError(form.phone);
-    }
-    
-    // Validar mensagem
-    if (message.length < 10) {
-        showError(form.message, 'Mensagem deve ter pelo menos 10 caracteres');
-        isValid = false;
-    } else {
-        clearError(form.message);
-    }
-    
-    if (isValid) {
-        const webhookURL = 'https://discord.com/api/webhooks/1346199326040522802/8MOVGB_VX8MDvWLmGsvnj_BdLS8GvSXthjsGMT4NSl-3DnTBq-TiG-cZRCiOKYyXNlPY';
-
-        // Mostrar indicador de carregamento
-        const submitButton = form.querySelector('button[type="submit"]');
-        const originalButtonText = submitButton.textContent;
-        submitButton.textContent = 'Enviando...';
-        submitButton.disabled = true;
-
-        const mensagem = {
-            embeds: [{
-                title: "🚀 Novo Lead - Site",
-                color: 0x00ff00,
-                fields: [
-                    {
-                        name: "Nome",
-                        value: name,
-                        inline: true
-                    },
-                    {
-                        name: "Email",
-                        value: email,
-                        inline: true
-                    },
-                    {
-                        name: "Telefone",
-                        value: phone,
-                        inline: true
-                    },
-                    {
-                        name: "Mensagem",
-                        value: message
-                    }
-                ],
-                timestamp: new Date().toISOString()
-            }]
-        };
-
-        fetch(webhookURL, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(mensagem)
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erro ao enviar formulário');
-            }
-            alert('Formulário enviado com sucesso!');
-            form.reset();
-        })
-        .catch(error => {
-            console.error('Erro:', error);
-            alert('Erro ao enviar formulário. Por favor, tente novamente.');
-        })
-        .finally(() => {
-            submitButton.textContent = originalButtonText;
-            submitButton.disabled = false;
-        });
-    }
-}
-
 // Funções auxiliares para mostrar/limpar erros
 function showError(input, message) {
     const formGroup = input.closest('.form-group');
@@ -185,3 +77,116 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 }); 
+
+
+function validateForm(event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalHTML = submitButton.innerHTML;
+
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const phone = form.phone.value.trim();
+    const message = form.message.value.trim();
+
+    let isValid = true;
+
+    // Validações
+    if (name.length < 3) {
+        showError(form.name, 'Nome deve ter pelo menos 3 caracteres');
+        isValid = false;
+    } else {
+        clearError(form.name);
+    }
+
+    if (!validateEmail(email)) {
+        showError(form.email, 'Email inválido');
+        isValid = false;
+    } else {
+        clearError(form.email);
+    }
+
+    const phoneDigits = phone.replace(/\D/g, '');
+    if (phoneDigits.length < 10 || phoneDigits.length > 11) {
+        showError(form.phone, 'Telefone inválido');
+        isValid = false;
+    } else {
+        clearError(form.phone);
+    }
+
+    if (message.length < 10) {
+        showError(form.message, 'Mensagem deve ter pelo menos 10 caracteres');
+        isValid = false;
+    } else {
+        clearError(form.message);
+    }
+
+    if (isValid) {
+        const webhookURL = 'https://discord.com/api/webhooks/1346199326040522802/8MOVGB_VX8MDvWLmGsvnj_BdLS8GvSXthjsGMT4NSl-3DnTBq-TiG-cZRCiOKYyXNlPY';
+
+        submitButton.classList.remove('sucesso', 'erro');
+        submitButton.classList.add('enviando');
+        submitButton.innerHTML = 'Enviando...';
+        submitButton.disabled = true;
+
+        const mensagem = {
+        username: "Capitão Brocha",
+        embeds: [{
+            title: "🚀 Novo Lead",
+            color: 3498470,
+            author: {
+            name: name,
+            icon_url: "https://cdn.discordapp.com/avatars/1346199326040522802/81611abb99750852be0d3a288d947b77.webp?size=128"
+            },
+            fields: [
+            {
+                name: "Email",
+                value: email,
+                inline: true
+            },
+            {
+                name: "Telefone (WhatsApp)",
+                value: `[📲 Abrir conversa no WhatsApp](https://wa.me/+55${phone.replace(/\D/g, '')})`,
+                inline: true
+            },
+            {
+                name: "Mensagem",
+                value: "```" + message + "```"
+            }
+            ],
+            footer: {
+            text: `Site  •  ${new Date().toLocaleDateString('pt-BR')}, ${new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}`,
+            icon_url: "https://github.com/palaboratory/lp-pa/blob/main/assets/logos/favicon.png?raw=true"
+            }
+        }]
+        };
+
+           fetch(webhookURL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(mensagem)
+        })
+        .then(response => {
+            if (!response.ok) throw new Error('Erro ao enviar formulário');
+            form.reset();
+            submitButton.classList.remove('enviando');
+            submitButton.classList.add('sucesso');
+            submitButton.innerHTML = 'Enviado!';
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            submitButton.classList.remove('enviando');
+            submitButton.classList.add('erro');
+            submitButton.innerHTML = 'Erro. Tente novamente';
+        })
+        .finally(() => {
+            setTimeout(() => {
+                submitButton.classList.remove('sucesso', 'erro', 'enviando');
+                submitButton.innerHTML = originalHTML;
+                submitButton.disabled = false;
+            }, 3000);
+        });
+    }
+}
