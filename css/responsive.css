@@ -172,6 +172,16 @@
         padding: 0 1rem;
     }
 
+    .journey-bg {
+        position: absolute;
+        top: 70%;    /* vertical center */
+        left: 0%;   /* horizontal center */
+        max-width: none;  /* allow image to keep original width */
+        width: cover;
+        height: 80px;
+        z-index: -1;
+        }
+
     .services {
         padding: 2rem 1rem 2rem;
     }
