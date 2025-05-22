@@ -134,11 +134,11 @@ function validateForm(event) {
         const mensagem = {
         username: "Capitão Brocha",
         embeds: [{
-            title: "🚀 Novo Lead",
+            title: name,
             color: 3498470,
             author: {
-            name: name,
-            icon_url: "https://cdn.discordapp.com/avatars/1346199326040522802/81611abb99750852be0d3a288d947b77.webp?size=128"
+                name: "Novo Lead!",
+                icon_url: "https://media.istockphoto.com/id/1442450033/vector/rocket-logo-vector-design-illustration.jpg?s=612x612&w=0&k=20&c=rwM6Ct1C1dFkbz0Dg3mNPpxFwcP04_i_fJ1SPPHK9MU="
             },
             fields: [
             {
