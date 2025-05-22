@@ -137,9 +137,9 @@
         border-bottom-right-radius: 32px;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-        background: rgba(4, 6, 32, 0.95);
+        background: rgb(255, 255, 255);
         z-index: 1000;
-        box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
     }
 
     .nav-container {
@@ -164,13 +164,80 @@
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 32px;
     }
     
     .hero-description {
-        font-size: 1.1rem;
-        padding: 0 1rem;
+        font-size: 14px;
     }
+
+    .journey {
+    width: 100vw;
+    overflow-x: auto;             
+    overflow-y: hidden;
+    padding: 1rem 0;
+    }
+
+    .flow-container {
+    display: flex;
+    flex-direction: row;          
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    min-width: max-content;       
+    }
+
+    .flow-stage {
+    flex: 0 0 auto;               
+    width: 280px;                 
+    background: #fff;
+    border-radius: 12px;
+    padding: 0.75rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    font-size: 14px;
+    }
+
+    .flow-stage .service-bg-icon {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        font-size: 6rem;
+        opacity: 0.03;
+        transform: rotate(-15deg);
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+    
+    .stage-icon {
+        width: 16px;
+        height: 16px;
+        font-size: 1.3rem;
+        background: #FE2C5515;
+        border-radius: 5px;
+        color: #FE2C55;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0; 
+    }
+
+    .flow-stage h3 {
+        font-size: 14px;
+        margin-bottom: 0.25rem;
+    }
+
+    .flow-stage p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .journey {
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    }
+    .journey::-webkit-scrollbar {
+    display: none; /* Chrome */
+    }
+
 
     .journey-bg {
         position: absolute;
@@ -193,6 +260,20 @@
     .services-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
+        padding-bottom: 20px;
+    }
+
+    /* Pseudo-element para a linha vertical no mobile */
+    .services-grid::before {
+      content: "";
+      position: absolute;
+      top: 1%; /* Início no topo */
+      left: 50%; /* Centraliza horizontalmente */
+      width: 24px; /* Largura da linha vertical */
+      height: 98%; /* Ajuste a altura para não cortar o último card */
+      background: var(--primary); /* Cor da linha */
+      transform: translateX(-50%); /* Ajuste final para centralizar precisamente */
+      z-index: 0;
     }
 
     .clients-grid {
@@ -248,7 +329,7 @@
 
     .section-title p,
     .section-subtitle p {
-        font-size: 12px !important;
+        font-size: 14px !important;
         text-align: left !important;
     }
 
@@ -368,10 +449,201 @@
         font-size: 12px !important;
     }
 
-    .flow-container {
+    .flow-stage {
+        padding: 0.75rem;
+    }
+    
+    .stage-icon {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-info .section-title .text-light {
+        font-size: 30px;
+    }
+
+    .case-slide img {
+        height: 200px; /* Altura menor para mobile */
+        width: auto; /* Mantém a proporção */
+        object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    }
+
+    .cases-nav {
+        display: flex;
+        justify-content: right;
+        gap: 1rem;
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 50px;
+        z-index: 2;
+    }
+
+    .nav-dot {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        background: transparent;
+        cursor: pointer;
+        padding: 0;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(4px);
+    }
+
+    .service-card:last-child {
+        border-bottom: none; /* Remove a borda inferior do último card */
+        margin-bottom: 0; /* Remove a margem inferior do último card */
+        padding-bottom: 0; /* Remove o padding inferior do último card */
+    }
+
+    /* Ajuste o tamanho do container do slider de cases no mobile */
+    .cases-slider {
+        width: 100%; /* Ocupa toda a largura disponível */
+        height: 300px; /* Altura menor para mobile, ajuste conforme necessário */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        padding: 3rem 1rem;
+    }
+
+    .contact-container {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-form {
+        padding: 1rem;
+    }
+    
+    .form-input {
+        font-size: 16px;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .section-title p,
+    .section-subtitle p {
+        font-size: 14px !important;
+        text-align: left !important;
+    }
+
+    .section-title h2 {
+        font-size: 16px !important;
+        text-align: left;
+    }
+
+    .dashboard-preview {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: 100vw;
+        max-height: 300px;
+        padding: 1rem 0;
+        margin-left: -16px;
+        margin-right: -16px;
+        box-sizing: content-box;
+        scroll-snap-type: x mandatory;
+    }
+
+    .dashboard-card {
+        width: 250px !important;
+        min-width: 250px !important;
+        max-width: 250px !important;
+        height: 300px !important;
+        min-height: 300px !important;
+        max-height: 300px !important;
+        flex: 0 0 250px !important;
+        scroll-snap-align: start;
+        margin-bottom: 0;
+        padding: 1rem 0.75rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .dashboard-card .card-header h3 {
+        font-size: 13px !important;
+        font-weight: 600;
+    }
+
+    .dashboard-card .period-text,
+    .dashboard-card .trend-up {
+        font-size: 0.75rem;
+    }
+
+    .chart-labels span {
+        font-size: 0.7rem;
+    }
+
+    .summary-label,
+    .summary-trend,
+    .kpi-label,
+    .kpi-trend,
+    .kpi-detail-label {
+        font-size: 0.75rem;
+    }
+
+    .summary-value,
+    .kpi-value,
+    .kpi-detail-value {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .chart-container {
+        height: 80px;
         gap: 0.5rem;
-        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .chart-bar {
+        width: 12px;
+        min-height: 4px;
+        border-radius: 3px;
+    }
+
+    .kpi-grid {
+        gap: 0.5rem;
+    }
+
+    .kpi-item {
+        padding: 0.5rem;
+        border-radius: 8px;
+    }
+
+    .donut-chart {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 0.5rem;
+    }
+
+    .donut-center {
+        font-size: 1rem;
+    }
+
+    .donut-label {
+        font-size: 0.75rem;
+    }
+
+    .market-segments {
+        gap: 0.5rem;
+        padding: 0;
+    }
+
+    .segment-label,
+    .segment-value {
+        font-size: 0.75rem;
+    }
+
+    .dashboard-card,
+    .dashboard-card * {
+        font-size: 12px !important;
     }
 
     .flow-stage {
@@ -379,9 +651,54 @@
     }
     
     .stage-icon {
-        width: 36px;
-        height: 36px;
+        width: 32px;
+        height: 32px;
         margin-bottom: 0.5rem;
+    }
+
+    .contact-info .section-title .text-light {
+        font-size: 30px;
+    }
+
+    .case-slide img {
+        height: 200px; /* Altura menor para mobile */
+        width: auto; /* Mantém a proporção */
+        object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    }
+
+    .cases-nav {
+        display: flex;
+        justify-content: right;
+        gap: 1rem;
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 50px;
+        z-index: 2;
+    }
+
+    .nav-dot {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        background: transparent;
+        cursor: pointer;
+        padding: 0;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(4px);
+    }
+
+    .service-card:last-child {
+        border-bottom: none; /* Remove a borda inferior do último card */
+        margin-bottom: 0; /* Remove a margem inferior do último card */
+        padding-bottom: 0; /* Remove o padding inferior do último card */
+    }
+
+    /* Ajuste o tamanho do container do slider de cases no mobile */
+    .cases-slider {
+        width: 100%; /* Ocupa toda a largura disponível */
+        height: 300px; /* Altura menor para mobile, ajuste conforme necessário */
     }
 }
 

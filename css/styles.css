@@ -272,10 +272,11 @@ button.erro {
 
 .journey {
   position: relative;
+  padding: 5rem 2rem 2rem;
   width: 100vw;
   overflow: visible;      /* permite overflow do <img> */
   display: flex;
-  align-items: center;    /* centra verticalmente o conteúdo */
+  align-items: left;    /* centra verticalmente o conteúdo */
   justify-content: center;/* centra horizontalmente */
 }
 
@@ -289,6 +290,77 @@ button.erro {
   z-index: -1;
 }
 
+
+.flow-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.flow-stage {
+    background: #fff;
+    border-radius: 30px;
+    border: 2px solid #00000010;
+    padding: 24px;
+    text-align: left;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transform: translateZ(0);
+    gap: 15px;;
+    backface-visibility: hidden;
+}
+
+.flow-stage p{
+    color: var(--text-tertiary);
+    font-size: 14px;
+}
+
+.flow-stage:hover {
+    border-color: #00000025;
+    transform: translateY(-1px);
+}
+
+.flow-stage .service-bg-icon {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    font-size: 6rem;
+    opacity: 0.03;
+    transform: rotate(-15deg);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.stage-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1.3rem;
+    background: #FE2C5515;
+    border-radius: 10px;
+    color: #FE2C55;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0; 
+}
+
+.flow-stage h4 {
+    color: var(--text-primary);
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+}
 
 .services {
     position: relative;
@@ -1209,76 +1281,6 @@ button[type="submit"]:disabled {
     }
 }
 
-.flow-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    position: relative;
-    z-index: 2;
-}
-
-.flow-stage {
-    background: #fff;
-    border-radius: 30px;
-    border: 2px solid #00000010;
-    padding: 24px;
-    text-align: left;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    transform: translateZ(0);
-    gap: 15px;;
-    backface-visibility: hidden;
-}
-
-.flow-stage p{
-    color: var(--text-tertiary);
-    font-size: 14px;
-}
-
-.flow-stage:hover {
-    border-color: #00000025;
-    transform: translateY(-1px);
-}
-
-.flow-stage .service-bg-icon {
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    font-size: 6rem;
-    opacity: 0.03;
-    transform: rotate(-15deg);
-    pointer-events: none;
-    transition: all 0.3s ease;
-}
-
-.stage-icon {
-    width: 38px;
-    height: 38px;
-    font-size: 1.3rem;
-    background: #FE2C5515;
-    border-radius: 10px;
-    color: #FE2C55;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0; 
-}
-
-.flow-stage h4 {
-    color: var(--text-primary);
-    font-size: 1rem;
-    margin-bottom: 0.75rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem; 
-}
 
 .tech-pills {
     display: flex;
