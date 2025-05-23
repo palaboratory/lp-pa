@@ -1,1 +1,21 @@
+name: Discord Notify
 
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    env:
+      DISC_1: ${{ secrets.DISC_1 }}
+      DISC_2: ${{ secrets.DISC_2 }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Enviar notificação no Discord
+        run: |
+          payload='{"content":"Deploy concluído!"}'
+          curl -H "Content-Type: application/json" \
+               -d "$payload" \
+               "https://discord.com/api/webhooks/${DISC_1}/${DISC_2}
