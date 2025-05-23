@@ -12,10 +12,13 @@ jobs:
       DISC_2: ${{ secrets.DISC_2 }}
     steps:
       - uses: actions/checkout@v3
-
-      - name: Enviar notificação no Discord
+      - name: Debug ENV
+        run: |
+          echo "DISC_1='$DISC_1'"
+          echo "DISC_2='$DISC_2'"
+      - name: Send Discord notification
         run: |
           payload='{"content":"Deploy concluído!"}'
           curl -H "Content-Type: application/json" \
                -d "$payload" \
-               "https://discord.com/api/webhooks/${DISC_1}/${DISC_2}
+               "https://discord.com/api/webhooks/${DISC_1}/${DISC_2}"
