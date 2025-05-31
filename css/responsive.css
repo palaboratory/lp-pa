@@ -263,14 +263,11 @@
 
     .journey-bg {
         position: absolute;
-        top: 40px !important;
-        left: 120px !important;
-        zoom: 2;
+        top: 100px !important;
         max-width: none;
         width: 100vw;
         height: auto;
         z-index: -1;
-        clip-path: inset(0 0 0 0);
         overflow: hidden;
     }
 
