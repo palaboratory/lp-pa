@@ -109,9 +109,9 @@
     .form-group input[type="text"],
     .form-group input[type="email"],
     .form-group input[type="tel"] {
-        height: 30px !important;
-        min-height: 30px !important;
-        max-height: 30px !important;
+        height: 40px !important;
+        min-height: 40px !important;
+        max-height: 40px !important;
         padding-top: 0;
         padding-bottom: 0;
     }
@@ -263,13 +263,20 @@
 
     .journey-bg {
         position: absolute;
-        top: 70%;    /* vertical center */
-        left: 0%;   /* horizontal center */
-        max-width: none;  /* allow image to keep original width */
-        width: cover;
-        height: 80px;
+        top: 40px !important;
+        left: 120px !important;
+        zoom: 2;
+        max-width: none;
+        width: 100vw;
+        height: auto;
         z-index: -1;
-        }
+        clip-path: inset(0 0 0 0);
+        overflow: hidden;
+    }
+
+    .hero {
+        padding-top: 220px;
+    }
 
     .services {
         padding: 2rem 1rem 2rem;
