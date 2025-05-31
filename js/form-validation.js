@@ -124,7 +124,7 @@ function validateForm(event) {
     }
 
     if (isValid) {
-        const webhookURL = 'https://discord.com/api/webhooks/1378398265082380338/2sYpXtx2H0_gccj_sHlmadH4pNMv3EkEkGc2V3MiSdRwSvpyRk5UkDPC5jDwm0Y4vwrN';
+        const webhookURL = 'https://discord.com/api/webhooks/${process.env.DISC_1}/${process.env.DISC_2}';
 
         submitButton.classList.remove('sucesso', 'erro');
         submitButton.classList.add('enviando');
