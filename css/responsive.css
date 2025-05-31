@@ -211,7 +211,7 @@
     flex: 0 0 auto;               
     width: 280px;                 
     background: #fff;
-    border-radius: 12px;
+    border-radius: 25px;
     padding: 0.75rem;
     box-shadow: 0 0 10px rgba(0,0,0,0.05);
     font-size: 14px;
@@ -229,11 +229,11 @@
     }
     
     .stage-icon {
-        width: 16px;
-        height: 16px;
-        font-size: 1.3rem;
+        width: 14px;
+        height: 14px;
+        font-size: 1.1rem;
         background: #FE2C5515;
-        border-radius: 5px;
+        border-radius: 8px;
         color: #FE2C55;
         display: flex;
         align-items: center;
