@@ -7,13 +7,13 @@
     --dark-surface: #111B3B;
 
     /* Textos */
-    --text-primary: #000000;
+    --text-primary: #151515;
     --text-secondary: rgba(0, 0, 0, 0.80);
     --text-tertiary: rgba(0, 0, 0, 0.5);
 
     /* Gradientes */
     --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-    --gradient-nav: linear-gradient(90deg, #fff 0%, #00000010, #fff 100%);
+    --gradient-nav: linear-gradient(90deg, #fff 0%, #15151510, #fff 100%);
     --gradient-glow: radial-gradient(
         circle at center,
         rgba(67, 97, 238, 0.15) 0%,
@@ -53,16 +53,12 @@ main {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 1151515;
     background:  rgb(255, 255, 255);
     transition: all 0.3s ease;
     padding: 0.75rem 0;
     margin: 0;
-    border-bottom: 1px solid #00000010
-}
-
-.header.scrolled {
-    background:  rgba(255, 255, 255);
+    border-bottom: 1px solid #15151510
 }
 
 .nav-container {
@@ -220,9 +216,9 @@ main {
 .button-secundary {
     padding: 0.4rem 1rem;
     font-size: 14px;
-    background: #00000010;
-    color: var(--text-secondary);
-    border: 1px solid #ffffff20;
+    background: #ffffff20;
+    color: #fff;
+    border: 0px solid #ffffff20;
     border-radius: 20px;
     font-weight: 500;
     text-decoration: none;
@@ -282,11 +278,13 @@ button.erro {
 
 .journey-bg {
   position: absolute;
-  top: 70%;    /* vertical center */
-  left: 0%;   /* horizontal center */
-  max-width: none;  /* allow image to keep original width */
+  top: 80%;    /* vertical center */
+  left: 50%;   /* horizontal center */
+  transform: translateX(-50%); /* centraliza horizontalmente */
+  max-width: fit-content;  /* allow image to keep original width */
   width: cover;
   height: 520px;
+  align-items: center; 
   z-index: -1;
 }
 
@@ -304,7 +302,7 @@ button.erro {
 .flow-stage {
     background: #fff;
     border-radius: 30px;
-    border: 2px solid #00000010;
+    border: 2px solid #15151510;
     padding: 24px;
     text-align: left;
     transition: all 0.3s ease;
@@ -324,7 +322,7 @@ button.erro {
 }
 
 .flow-stage:hover {
-    border-color: #00000025;
+    border-color: #15151525;
     transform: translateY(-1px);
 }
 
@@ -415,7 +413,7 @@ button.erro {
   left: 0;
   width: 100%;
   height: 24px;
-  background: var(--primary);
+  background: #151515;
   transform: translateY(-50%);
   z-index: 0;
 }
@@ -677,7 +675,7 @@ button.erro {
 
 /* Formulário */
 .contact-form {
-    background: #000;
+    background: #151515;
     border-radius: 30px;
     padding: 1.5rem;
     backdrop-filter: blur(10px);
@@ -778,7 +776,7 @@ button[type="submit"]:disabled {
    ========================================= */
 .footer {
     padding: 2rem;
-    background: #000;
+    background: #151515;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -894,7 +892,7 @@ button[type="submit"]:disabled {
 
 .dashboard-card {
     background: #fff;
-    border: 2px solid #00000010;
+    border: 2px solid #15151510;
     border-radius: 30px;
     padding: 1.5rem;
     width: 360px;
@@ -1291,7 +1289,7 @@ button[type="submit"]:disabled {
 }
 
 .tech-pill {
-    background: #000;
+    background: var(--primary);
     padding: 0.25rem 0.75rem;
     border-radius: 15px;
     font-size: 0.75rem;
@@ -1443,4 +1441,16 @@ html {
 .cases-slider,
 .contact {
     scroll-margin-top: 60px; /* Adiciona margem de scroll específica para estas seções */
+}
+
+button.secondary {
+    background: #ffffff20;
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+button.secondary:hover {
+    background: #ffffff30;
+    transform: translateY(-2px);
 } 

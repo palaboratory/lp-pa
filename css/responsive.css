@@ -50,16 +50,36 @@
         gap: 2rem;
     }
 
+    .form-title {
+        display: none;
+    }
+
     .contact-form {
         padding: 1rem;
         border-radius: 12px;
+        background: none;
+        border: none;
     }
     
     .form-group input,
     .form-group textarea {
         font-size: 1rem;
+
         padding: 0.75rem;
         border-radius: 8px;
+        border: none;
+        background: #00000010;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+        outline: none;
+        background: #00000015;
+    }
+
+    .form-group input:invalid:not(:placeholder-shown),
+    .form-group textarea:invalid:not(:placeholder-shown) {
+        background: #ff444410;
     }
 
     button[type="submit"] {
@@ -137,7 +157,7 @@
         border-bottom-right-radius: 32px;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-        background: rgb(255, 255, 255);
+        background: #151515;
         z-index: 1000;
         box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
     }
@@ -160,6 +180,7 @@
     }
 
     .logo img {
+        content: url('assets\logos\logom.pnghttps://github.com/palaboratory/lp-pa/blob/main/assets/logos/logom.png?raw=true');
         height: 32px;
     }
 
@@ -327,15 +348,29 @@
         padding: 0.5rem 0.75rem;
     }
 
-    .section-title p,
-    .section-subtitle p {
-        font-size: 14px !important;
-        text-align: left !important;
+    .section-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    .section-title h2 {
-        font-size: 16px !important;
-        text-align: left;
+    .section-title p,
+    .section-subtitle p {
+        font-size: 13px !important;
+        font-weight: 300 !important;
+        text-align: center !important;
+        margin: 0 auto;
+    }
+
+    .contact-info .section-title p {
+        text-align: center !important;
+        margin: 0 auto;
+    }
+
+    .clients .section-title p {
+        text-align: center !important;
+        margin: 0 auto;
     }
 
     .dashboard-preview {
