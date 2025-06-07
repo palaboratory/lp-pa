@@ -86,7 +86,6 @@
         width: 100%;
         font-size: 1rem;
         padding: 1rem 0;
-        border-radius: 8px;
     }
 
     /* Títulos dos campos */
@@ -481,11 +480,23 @@
         width: auto; /* Mantém a proporção */
         object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
     }
+    
+    .client-card img {
+        width: auto;
+        height: 60px;
+        object-fit: contain;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+
+    .cases-nav {
+        display: none !important;
+    }
 
     /* Ajuste o tamanho do container do slider de cases no mobile */
     .cases-slider {
-        width: 100%; /* Ocupa toda a largura disponível */
-        height: 300px; /* Altura menor para mobile, ajuste conforme necessário */
+        width: 100%; 
+        height: 220px; 
     }
 }
 
@@ -646,28 +657,29 @@
         width: auto; /* Mantém a proporção */
         object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
     }
-
-    .cases-nav {
-        display: flex;
-        justify-content: right;
-        gap: 1rem;
-        position: absolute;
-        bottom: 20px;
-        left: 0;
-        right: 50px;
-        z-index: 2;
+    
+    .client-card img {
+        width: auto;
+        height: 60px;
+        object-fit: contain;
+        opacity: 1;
+        transition: opacity 0.3s ease;
     }
 
-    .nav-dot {
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        border: 2px solid rgba(255, 255, 255, 0.5);
-        background: transparent;
-        cursor: pointer;
-        padding: 0;
-        transition: all 0.3s ease;
-        backdrop-filter: blur(4px);
+    .cases-nav {
+        display: none !important;
+    }
+
+    .cases-slider {
+        width: 100%; 
+        height: 200px; 
+    }
+
+    .cases-track {
+        display: flex;
+        transition: transform 0.5s ease;
+        width: auto;
+        height: 200px;
     }
 
     .service-card {
@@ -681,27 +693,7 @@
         padding: 1.25rem;
         transition: all 0.3s ease;
         border: none;
-      }
-
-    .service-icon {
-        font-size: 24px;
-        color: #000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
-      
-    /* Ajuste o tamanho do container do slider de cases no mobile */
-    .cases-slider {
-        width: 100%; /* Ocupa toda a largura disponível */
-        height: 300px; /* Altura menor para mobile, ajuste conforme necessário */
-    }
-
-    .service-description {
-        color: var(--text-secondary);
-        line-height: 1.5;
-        font-size:12px;
-        font-weight: 300;
-    }
+    
 }
 
