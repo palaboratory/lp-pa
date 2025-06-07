@@ -1,4 +1,3 @@
-/* -------- utilidades já existentes -------- */
 function validateEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
