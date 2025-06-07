@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PA Lab - Transformação Digital & Inovação</title>
+    <title>PA Lab | Engenharia de Dados, BI e Web Analytics</title>
+    <meta name="description" content="Consultoria especializada em Engenharia de Dados, Business Intelligence e Web Analytics. Transforme dados em decisões.">
     <link rel="icon" type="image/png" href="assets/logos/favicon.png">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta property="og:title" content="PA Lab | Engenharia de Dados, BI e Web Analytics">
+    <meta property="og:description" content="Consultoria especializada em Engenharia de Dados, Business Intelligence e Web Analytics.">
+    <meta property="og:url" content="https://www.palaboratory.com">
+    <meta property="og:image" content="https://www.palaboratory.com/assets/images/og-cover.jpg">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
     <header class="header">
@@ -376,7 +382,7 @@
             <div class="contact-container">
                 <div class="contact-info">
                     <div class="section-title" style="text-align: left;">
-                        <div class="pre-title">COMEÇE AGORA!</div>
+                        <div class="pre-title">COMECE AGORA!</div>
                         <h2><span class="text-light">Quer saber como a PA Lab pode <b>acelerar seu negócio?<b></span></h2>
                         <p>Descubra como nossa expertise em dados pode ser o catalisador da sua próxima grande conquista. Cada projeto é uma nova história de sucesso esperando para começar.</p>
                     </div>
@@ -393,12 +399,12 @@
                     </div>
                     <div class="form-group">
                         <label for="email" style="font-weight: 500; font-size: 14px;">E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="exemplo@email.com" required oninput="validateEmail(this)" autocomplete="email">
+                        <input type="email" id="email" name="email" placeholder="exemplo@email.com" required autocomplete="email">
                         <span class="error-message"></span>
                     </div>
                     <div class="form-group">
                         <label for="phone" style="font-weight: 500; font-size: 14px;">Telefone</label>
-                        <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000" required oninput="maskPhone(this)" autocomplete="tel">
+                        <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000" required autocomplete="tel">
                         <span class="error-message"></span>
                     </div>
                     <div class="form-group">
@@ -611,6 +617,14 @@
     <script src="js/clients-slider.js"></script>
     <script src="js/form-validation.js"></script>
     <script src="js/dashboard-effects.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VFYM6K579Y"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-VFYM6K579Y');
+    </script>
     <script>
         // Cases Slider
         const casesTrack = document.querySelector('.cases-track');
