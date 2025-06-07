@@ -1,3 +1,6 @@
+// Endpoint do Google Apps Script que processará o formulário
+const APPSCRIPT_URL = 'YOUR_APPSCRIPT_URL_HERE';
+
 // Função para validar email
 function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -124,7 +127,7 @@ function validateForm(event) {
     }
 
     if (isValid) {
-        const webhookURL = `https://discord.com/api/webhooks/${process.env.DISC_1}/${process.env.DISC_2}`;
+        const scriptURL = APPSCRIPT_URL;
 
         submitButton.classList.remove('sucesso', 'erro');
         submitButton.classList.add('enviando');
@@ -163,7 +166,7 @@ function validateForm(event) {
         }]
         };
 
-           fetch(webhookURL, {
+           fetch(scriptURL, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(mensagem)
