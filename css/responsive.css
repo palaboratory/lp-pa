@@ -382,8 +382,17 @@
     }
 
     .dashboard-card .card-header h3 {
-        font-size: 13px !important;
-        font-weight: 600;
+        font-size: 11px !important;
+        font-weight: 500;
+    }
+
+    .card-header {
+        margin-bottom: 0;
+    }
+
+    .kpi-details {
+        margin-top:0 ;
+        padding-top: 1rem;
     }
 
     .dashboard-card .period-text,
@@ -393,6 +402,16 @@
 
     .chart-labels span {
         font-size: 0.7rem;
+    }
+
+    .chart-labels {
+        margin: 0;
+    }
+
+    .revenue-details {
+        margin-top: auto;
+        padding-top: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .summary-label,
@@ -408,12 +427,6 @@
     .kpi-detail-value {
         font-size: 1rem;
         font-weight: 700;
-    }
-
-    .chart-container {
-        height: 80px;
-        gap: 0.5rem;
-        margin-bottom: 0.5rem;
     }
 
     .chart-bar {
@@ -540,7 +553,7 @@
         display: flex;
         flex-direction: row;
         gap: 1rem;
-        overflow-x: auto;
+        overflow-x: hidden;
         overflow-y: hidden;
         width: 100vw;
         max-height: 300px;
@@ -568,18 +581,10 @@
         justify-content: space-between;
     }
 
-    .dashboard-card .card-header h3 {
-        font-size: 13px !important;
-        font-weight: 600;
-    }
 
     .dashboard-card .period-text,
     .dashboard-card .trend-up {
         font-size: 0.75rem;
-    }
-
-    .chart-labels span {
-        font-size: 0.7rem;
     }
 
     .summary-label,
@@ -598,7 +603,7 @@
     }
 
     .chart-container {
-        height: 80px;
+        height: 100px;
         gap: 0.5rem;
         margin-bottom: 0.5rem;
     }
@@ -644,7 +649,7 @@
 
     .dashboard-card,
     .dashboard-card * {
-        font-size: 12px !important;
+        font-size: 10px !important;
     }
     
     .contact-info .section-title .text-light {
