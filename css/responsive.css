@@ -653,11 +653,23 @@
     }
 
     .case-slide img {
-        height: 200px; /* Altura menor para mobile */
-        width: auto; /* Mantém a proporção */
-        object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+        height: 200px;
+        width: auto; 
+        object-fit: cover;
+    }
+
+    .case-slide img {
+        content: url('https://github.com/palaboratory/lp-pa/blob/main/assets/cases/m_sermais.png?raw=true');
     }
     
+    .case-slide img[alt="Case Super Professor"] {
+        content: url('https://github.com/palaboratory/lp-pa/blob/main/assets/cases/m_superprof.png?raw=true');
+    }
+    
+    .case-slide img[alt="Case DNV"] {
+        content: url('https://github.com/palaboratory/lp-pa/blob/main/assets/cases/m_dnv.png?raw=true');
+    }
+
     .client-card img {
         width: auto;
         height: 60px;
