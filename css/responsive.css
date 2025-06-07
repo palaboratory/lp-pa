@@ -653,8 +653,7 @@
     }
 
     .case-slide img {
-        height: 200px;
-        width: auto; 
+        height: auto;
         object-fit: cover;
     }
 
