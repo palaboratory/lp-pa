@@ -3,10 +3,21 @@ function validateEmail(email) {
 }
 
 function maskPhone(event) {
-  let v = event.target.value.replace(/\D/g, '').slice(0, 11);
-  if (v.length >= 2) v = `(${v.slice(0, 2)}) ${v.slice(2)}`;
-  if (v.length >= 10) v = `(${v.slice(0, 2)}) ${v.slice(2, 7)}-${v.slice(7)}`;
-  event.target.value = v;
+  const input   = event.target;
+  const digits  = input.value.replace(/\D/g, '').slice(0, 11);   // só números, máx 11
+  let formatted = '';
+
+  if (digits.length >= 11) {                     // (99) 99999-9999
+    formatted = `(${digits.slice(0,2)}) ${digits.slice(2,7)}-${digits.slice(7,11)}`;
+  } else if (digits.length >= 10) {              // (99) 9999-9999
+    formatted = `(${digits.slice(0,2)}) ${digits.slice(2,6)}-${digits.slice(6,10)}`;
+  } else if (digits.length > 2) {                // (99) 999…
+    formatted = `(${digits.slice(0,2)}) ${digits.slice(2)}`;
+  } else {                                       // (9
+    formatted = digits;
+  }
+
+  input.value = formatted;
 }
 
 function showError(input, msg) {
@@ -30,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* -------- submit -------- */
-const APPSCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxjJCkvg-JTCLhRrHkiYDNYFqKbkBiTWQKJ03WG6EyghfjY5T8svfqpDdOSn-y7rrpv/exec';
+const APPSCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzHrV4OJrajEhBeWj2Uir101CQ8pmRnGpWCPZe6vcY4ZafV0TeXnTrrpF2lDPpXr6Vs/exec';
 
 function validateForm(event) {
   event.preventDefault();
